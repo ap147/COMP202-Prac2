@@ -6,6 +6,7 @@ import java.util.*;
 
 class HttpServerSession extends Thread
 {
+    //Socket that was accepted by the Server and passed through constructor is saved here
     private Socket AcceptedSocket;
     public HttpServerSession(Socket _AcceptedSocket)
     {
@@ -16,12 +17,14 @@ class HttpServerSession extends Thread
     {
         try
         {
+            //reader which is used to read what webpage/socket status
             BufferedReader reader = new BufferedReader(new InputStreamReader(AcceptedSocket.getInputStream()));
+            //writter used to send data to socket/webpage
             BufferedOutputStream writter = new BufferedOutputStream(AcceptedSocket.getOutputStream());
-
+            //getting what socket said and spliting it
             String FirstLine = reader.readLine();
             String parts[] = FirstLine.split(" ");
-
+            //checking if correct message
             if(parts.length == 3)
             {
                 if(parts[0].compareTo("GET") == 0)
@@ -64,10 +67,26 @@ class HttpServerSession extends Thread
              - Be sure to catch end of file (when FileInputStream::read returns -1).
              - At the end of the le, ensure that you then flush the output before you return.
             */
-            
+
+
             //FileInputStream file = new FileInputStream("helloworld.txt");
-            FileInputStream file = new FileInputStream("page.html");
-            byte[] array = new byte[10];
+
+            byte[] array = new byte[1024];
+
+            FileInputStream is = new FileInputStream("hi.png");
+
+            int rc = 0;
+
+            while(true)
+            {
+                if(rc == -1)
+                {
+                    break;
+                }
+                rc = is.read(array);
+                writter.write(array);
+            }
+           /*
             while(true)
             {
                 System.out.println("Inside While loop");
@@ -82,8 +101,10 @@ class HttpServerSession extends Thread
                 writter.write(array);
             }
             System.out.println("While loop completed");
+            */
             writter.flush();
             AcceptedSocket.close();
+
 
         }
         catch(Exception e)
