@@ -40,9 +40,9 @@ know does not exist.
 		catch(Exception e)
 		{
 			System.out.println("Error : " + e);
+			System.out.println("Http Server");
 		}
 	}
-
 }
 
 
