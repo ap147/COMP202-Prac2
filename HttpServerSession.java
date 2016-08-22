@@ -68,20 +68,30 @@ class HttpServerSession extends Thread
             int rc;
             println(writter, "HTTP/1.1 200 OK");
             println(writter, "");
+            System.out.println(1);
             //Reading file until end of file
+
             while(true)
             {
                 rc = file.read(array);
+                System.out.println("Sleepy: 1 seconds");
 
                 if(rc == - 1)
                 {
+                    System.out.println(2 + "looping out");
                     break;
                 }
+                sleep(1000);
                 writter.write(array);
+
             }
-            //Sending, Closing Connection
+
             writter.flush();
+            //Sending, Closing Connection
+            System.out.println(3);
+            //writter.flush();
             AcceptedSocket.close();
+            System.out.println(4);
         }
         catch(Exception e)
         {
