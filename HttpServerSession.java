@@ -68,7 +68,7 @@ class HttpServerSession extends Thread
             byte[] array = new byte[1024];
             try
             {
-                FileInputStream file = new FileInputStream(RequestedFile);
+                FileInputStream file = new FileInputStream("Website/"+RequestedFile);
                 int rc;
 
 

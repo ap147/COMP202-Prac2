@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c4a4ac-7a6d-4ae9-9cae-89764d375178" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServer.class" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServerSession.class" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CSS.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ColorfulGlobe.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HomePage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HomePageImg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HomePageImg2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HumanSpaceCraft.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/LeftArrow.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backgroundimg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dynamic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/greenticksprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/helloworld.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/informational.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/helloworld.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quiz1phot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quiz2photo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smacktick.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpServerSession.java" afterPath="$PROJECT_DIR$/HttpServerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/page.html" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.html" afterPath="$PROJECT_DIR$/page.html" />
     </list>
     <ignored path="comp202_prac2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,46 +43,28 @@
     <favorites_list name="comp202_prac2" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/HttpServer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HttpServerSession.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/HttpServerSession.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/HttpServer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HttpServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpServerSession.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HttpServerSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -477,16 +474,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        <state relative-caret-position="30">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HttpServerSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+        <state relative-caret-position="150">
+          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
           <folding />
         </state>
       </provider>
