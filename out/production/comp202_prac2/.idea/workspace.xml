@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c4a4ac-7a6d-4ae9-9cae-89764d375178" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helloworld.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServer.class" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServerSession.class" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/HttpServerSession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HttpServerSession.java" afterPath="$PROJECT_DIR$/HttpServerSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/comp202_prac2/page.html" afterPath="$PROJECT_DIR$/out/production/comp202_prac2/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.html" afterPath="$PROJECT_DIR$/page.html" />
     </list>
     <ignored path="comp202_prac2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +33,8 @@
           <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HttpServer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+                <state relative-caret-position="270">
+                  <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
@@ -39,8 +43,8 @@
           <file leaf-file-name="HttpServerSession.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HttpServerSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+                <state relative-caret-position="271">
+                  <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -53,8 +57,8 @@
           <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HttpServer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+                <state relative-caret-position="286">
+                  <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
@@ -75,6 +79,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/HttpServer.java" />
         <option value="$PROJECT_DIR$/HttpServerSession.java" />
       </list>
     </option>
@@ -430,7 +435,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26243782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -471,16 +476,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="270">
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HttpServerSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        <state relative-caret-position="271">
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
           <folding />
         </state>
       </provider>

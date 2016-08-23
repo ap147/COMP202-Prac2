@@ -24,12 +24,14 @@ class HttpServerSession extends Thread
             //getting what socket said and spliting it
             String FirstLine = reader.readLine();
             String parts[] = FirstLine.split(" ");
+            String RequestedFile = "";
             //checking if correct message
             if(parts.length == 3)
             {
                 if(parts[0].compareTo("GET") == 0)
                 {
                     String filename = parts[1].substring(1);
+                    RequestedFile = filename;
                     System.out.println("File Requested : " + filename);
                     if(filename.compareTo("HttpServer.java") == 0)
                     {
@@ -64,32 +66,43 @@ class HttpServerSession extends Thread
             */
 
             byte[] array = new byte[1024];
-            FileInputStream file = new FileInputStream("page.html");
-            int rc;
-            println(writter, "HTTP/1.1 200 OK");
-            println(writter, "");
-            System.out.println(1);
-            //Reading file until end of file
-
-            while(true)
+            try
             {
-                rc = file.read(array);
-                System.out.println("Sleepy: 1 seconds");
+                FileInputStream file = new FileInputStream(RequestedFile);
+                int rc;
 
-                if(rc == - 1)
-                {
-                    System.out.println(2 + "looping out");
-                    break;
+
+                println(writter, "HTTP/1.1 200 OK");
+                println(writter, "");
+                System.out.println(1);
+                //Reading file until end of file
+
+                while (true) {
+                    rc = file.read(array);
+
+
+                    if (rc == -1) {
+                        System.out.println(2 + "looping out");
+                        break;
+                    }
+                    //System.out.println("Sleepy: 1 seconds");
+                    // sleep(1000);
+                    writter.write(array);
                 }
-                sleep(1000);
-                writter.write(array);
 
+                writter.flush();
+                //Sending, Closing Connection
+                System.out.println(3);
             }
-
-            writter.flush();
-            //Sending, Closing Connection
-            System.out.println(3);
-            //writter.flush();
+            catch(Exception e)
+            {
+                System.out.println("File Requested Not Found");
+                println(writter, "HTTP/1.1 404 Not Found");
+                println(writter, "");
+                writter.flush();
+                AcceptedSocket.close();
+                return;
+            }
             AcceptedSocket.close();
             System.out.println(4);
         }
@@ -113,8 +126,5 @@ class HttpServerSession extends Thread
         return;
     }
 
-
-
-
-
+    
 }

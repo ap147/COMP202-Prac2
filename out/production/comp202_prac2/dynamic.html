@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+    <script>
+        function HideQuiz1Ticks()
+        {
+            document.getElementById("tick1").style.display = "none";
+            document.getElementById("tick2").style.display = "none";
+            document.getElementById("tick3").style.display = "none";
+        }
+            function HideQuiz2Ticks()
+        {
+            document.getElementById("tick11").style.display = "none";
+            document.getElementById("tick22").style.display = "none";
+            document.getElementById("tick33").style.display = "none";
+        }
+        
+        
+        function ResitCordinatesQuiz1()
+        {
+            document.getElementById("tick1").style.backgroundPosition = "-10px 0px";
+            document.getElementById("tick2").style.backgroundPosition = "-10px 0px";
+            document.getElementById("tick3").style.backgroundPosition = "-10px 0px";
+        }
+         function ResitCordinatesQuiz2()
+        {
+            document.getElementById("tick11").style.backgroundPosition = "-10px 0px";
+                        document.getElementById("tick22").style.backgroundPosition = "-10px 0px";
+                        document.getElementById("tick33").style.backgroundPosition = "-10px 0px";
+        } 
+        
+        function goBack() 
+        {
+            window.history.back();
+        }
+        
+        function ClearQuiz1()
+        {
+            console.log("Quiz 1: Clear Button Clicked!");
+            document.getElementById("Answer1").value = "";
+            document.getElementById("Answer2").value = "";
+            document.getElementById("Answer3").value = "";
+            console.log("Quiz 1: Text Fields Cleared!");
+            HideQuiz1Ticks();
+            ResitCordinatesQuiz1();
+        
+        }
+          function ClearQuiz2()
+        {
+            console.log("Quiz 2: Clear Button Clicked!");
+            document.getElementById("Answer11").value = "";
+            document.getElementById("Answer22").value = "";
+            document.getElementById("Answer33").value = "";
+            console.log("Quiz 2: Text Fields Cleared!");
+             HideQuiz2Ticks();
+            ResitCordinatesQuiz2();
+            
+        }
+        
+        function CheckQuiz1()
+        {        
+            console.log("Quiz 1: Check Button Clicked!");
+            ResitCordinatesQuiz1();
+          
+             var Answer1 = "1961";
+             var Answer2 = "Gus";
+             var Answer3 = "15";
+             var ValueAnswer1 = document.getElementById("Answer1").value;
+             var ValueAnswer2 = document.getElementById("Answer2").value;
+             var ValueAnswer3 = document.getElementById("Answer3").value;
+            document.getElementById("tick1").style.display = "block";
+            document.getElementById("tick2").style.display = "block";
+            document.getElementById("tick3").style.display = "block";
+             console.log("Checking Answer 1");
+            if (Answer1 ==  ValueAnswer1){
+
+                console.log("Answer 1: Tick");
+                document.getElementById("tick1").style.backgroundPosition = "0px 0px";
+            }
+             console.log("Checking Answer 2");
+            if (Answer2 == ValueAnswer2){
+
+                console.log("Answer 2: Tick");
+                document.getElementById("tick2").style.backgroundPosition = "0px 0px";
+            }
+             console.log("Checking Answer 3");
+             if (Answer3 == ValueAnswer3){
+
+                console.log("Answer 3: Tick");
+                 document.getElementById("tick3").style.backgroundPosition = "0px 0px";
+            }          
+            console.log("Quiz 1: Text Fields Checked!");
+        }
+          function CheckQuiz2()     
+        {     
+             console.log("Quiz 2: Check Button Clicked!");
+             ResitCordinatesQuiz2();
+             var Answer11 = "2011";
+             var Answer22 = "135";
+             var Answer33 = "21/07/2011";
+             var ValueAnswer11 = document.getElementById("Answer11").value;
+             var ValueAnswer22 = document.getElementById("Answer22").value;
+             var ValueAnswer33 = document.getElementById("Answer33").value;
+                   document.getElementById("tick11").style.display = "block";
+            document.getElementById("tick22").style.display = "block";
+            document.getElementById("tick33").style.display = "block";
+             console.log("Checking Answer 1");
+            if (Answer11 ==  ValueAnswer11){
+                document.getElementById("tick11").style.backgroundPosition = "0px 0px";
+
+                console.log("Answer 1: Tick");
+            }
+             console.log("Checking Answer 2");
+            if (Answer22 == ValueAnswer22){
+                document.getElementById("tick22").style.backgroundPosition = "0px 0px";
+
+                console.log("Answer 2: Tick");
+            }
+             console.log("Checking Answer 3");
+             if (Answer33 == ValueAnswer33){
+
+                 document.getElementById("tick33").style.backgroundPosition = "0px 0px";
+                console.log("Answer 3: Tick");
+            }          
+            console.log("Quiz 2: Text Fields Checked!");
+        }
+    
+    </script>
+    <title>Quiz</title>    
+</head>   
+    
+<body>
+    <div id="CountainerD">
+   <div id = "Header">
+       
+          <a href="#" onclick="history.back()">
+              <img id="LeftArrow" src="LeftArrow.svg" alt="svg" style="width:100px; height: 50px; "> </a>
+   </div>
+    
+   <div id = "Content">
+       <br><br><br>
+        <hr>
+  
+                           <img id ="quiz1photo" src="quiz1phot.jpg" alt="Mountain View" style="width:230px;height:250px;">
+            <form id="Quiz1" >
+                <h2>Mercury-Redstone 4 Quiz</h2>
+                What year was Mercury-Redstone 4 mission lacuhed?<br>
+                <input type="text" id ="Answer1">
+                <div class="tick" id="tick1"> </div>
+                <br><br>
+                
+                 Who was inside the Liberty Bell 7? (First Name)<br>
+                 <input type="text" id ="Answer2">     
+                 <div class="tick" id="tick2"></div>
+                 <br><br>
+                
+                  What was the launch durnation of this mission?(Only Minutes)<br>
+                  <input type="text" id="Answer3">                
+                  <div class="tick" id="tick3"></div>
+                  <br><br> 
+                
+                <button type="button" onclick="CheckQuiz1()" value="Check">Check</button>          
+                <button type="button" onclick="ClearQuiz1()" value="Clear">Clear</button>            
+                    
+                </form>
+    
+  
+                 
+            <br>
+                  <hr id = quizsep>
+               <img id ="quiz2photo" src="quiz2photo.png" alt="Mountain View" style="width:230px;height:250px;">
+            <form id="Quiz2" >       
+                   <h2>Space Shuttle Program Quiz</h2>
+  What year was the last year of The Space Shuttle Program?<br>
+  <input type="text" id="Answer11">  
+                   <div class="tick" id="tick11"></div>
+  <br><br>
+  How many missions had done in The Space Shuttle Program?<br>
+  <input type="text" id="Answer22">
+                    <div class="tick" id="tick22"></div><br><br>
+  What date was The Shuttle Program ended ? (D/M/Y)<br>
+   <input type="text" id="Answer33">
+                      <div class="tick" id="tick33"><p></p></div>
+                <br><br>       
+                 <button type="button" onclick="CheckQuiz2()" value="Check">Check</button>
+                <button type="button" onclick="ClearQuiz2()" value="Clear">Clear</button>
+</form>
+                </div> 
+    </div>    
+</body>
+
+</html>
