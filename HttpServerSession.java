@@ -1,3 +1,5 @@
+import com.sun.org.apache.regexp.internal.RE;
+
 import java.net.*;
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -32,7 +34,7 @@ class HttpServerSession extends Thread
                 {
                     String filename = parts[1].substring(1);
                     RequestedFile = filename;
-                    System.out.println("File Requested : " + filename);
+                    System.out.println("File Requested : " + filename + "x");
                     if(filename.compareTo("HttpServer.java") == 0)
                     {
 
@@ -68,43 +70,48 @@ class HttpServerSession extends Thread
             byte[] array = new byte[1024];
             try
             {
-                FileInputStream file = new FileInputStream("Website/"+RequestedFile);
-                int rc;
-
-
-                println(writter, "HTTP/1.1 200 OK");
-                println(writter, "");
-                System.out.println(1);
-                //Reading file until end of file
-
-                while (true) {
-                    rc = file.read(array);
-
-
-                    if (rc == -1) {
-                        System.out.println(2 + "looping out");
-                        break;
-                    }
-                    //System.out.println("Sleepy: 1 seconds");
-                    // sleep(1000);
-                    writter.write(array);
+                if (RequestedFile.equals(""))
+                {
+                    RequestedFile = "index.html";
                 }
 
-                writter.flush();
+                //Opening Requested file (all files in Website Folder)
+                FileInputStream file = new FileInputStream("Website/" + RequestedFile);
+
+                //Used to check if end of file
+                int rc;
+                //Letting Browser know requested file is coming
+                println(writter, "HTTP/1.1 200 OK");
+                println(writter, "");
+
+                //Reading file until end of file
+                while (true) {
+                    //Reading file
+                    rc = file.read(array);
+                    //Checking if file has ended
+                    if (rc == -1) {
+                        break;
+                    }
+                    //Pauses for 1 Secound
+                    // sleep(1000);
+                    //Loading it into a pipe
+                    writter.write(array);
+                }
                 //Sending, Closing Connection
-                System.out.println(3);
+                writter.flush();
+                AcceptedSocket.close();
             }
             catch(Exception e)
             {
+                //End up here if file requested doesnt exist in "Website" Folder
                 System.out.println("File Requested Not Found");
                 println(writter, "HTTP/1.1 404 Not Found");
                 println(writter, "");
+                //Sending Message, Closing Connection
                 writter.flush();
                 AcceptedSocket.close();
                 return;
             }
-            AcceptedSocket.close();
-            System.out.println(4);
         }
         catch(Exception e)
         {
@@ -114,7 +121,7 @@ class HttpServerSession extends Thread
             System.out.println("Line Number : " + x);
         }
     }
-
+    //A Simple Print method that mimcs
     private void println(BufferedOutputStream bos, String s) throws IOException
     {
         String news = s + "\r\n";
