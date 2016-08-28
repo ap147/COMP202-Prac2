@@ -5,7 +5,8 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.util.*;
 
-
+//Inststances are created when a new connection is made, sends any files browser requests except if its not in "Website"
+//folder, then sends a
 class HttpServerSession extends Thread
 {
     //Socket that was accepted by the Server and passed through constructor is saved here
@@ -35,10 +36,6 @@ class HttpServerSession extends Thread
                     String filename = parts[1].substring(1);
                     RequestedFile = filename;
                     System.out.println("File Requested : " + filename);
-                    if(filename.compareTo("HttpServer.java") == 0)
-                    {
-
-                    }
                 }
             }
 
@@ -48,8 +45,7 @@ class HttpServerSession extends Thread
                 String line = reader.readLine();
                 if(line == null)
                 {
-                    //return;
-                    //DONT KNOW WHAT TO DO HERE
+                    break;
                 }
                 if(line.compareTo("") == 0)
                 {
@@ -58,47 +54,45 @@ class HttpServerSession extends Thread
                 }
             }
 
-            // Use this when sending text
-            /*
-            println(writter, "HTTP/1.1 200 OK");
-            println(writter, "");
-            println(writter, "Hello World");
-            writter.flush();
-            AcceptedSocket.close();
-            */
-
             byte[] array = new byte[1024];
+
             try
             {
                 if (RequestedFile.equals(""))
                 {
-                    RequestedFile = "index.html";
+                    RequestedFile = "informational.html";
                 }
+                /*
+                println(writter, "HTTP/1.1 200 OK");
+                println(writter, "");
+                println(writter, "Hello World");
+                */
 
                 //Opening Requested file (all files in Website Folder)
                 FileInputStream file = new FileInputStream("Website/" + RequestedFile);
 
                 //Used to check if end of file
-                int rc;
+                int fileOutput;
                 //Letting Browser know requested file is coming
                 println(writter, "HTTP/1.1 200 OK");
                 println(writter, "");
 
                 //Reading file until end of file
-                while (true) {
+                while (true)  {
                     //Reading file
-                    rc = file.read(array);
+                    fileOutput = file.read(array);
                     //Checking if file has ended
-                    if (rc == -1) {
+                    if (fileOutput == -1) {
                         break;
                     }
                     //Pauses for 1 Secound
-                    // sleep(1000);
-                    //Loading it into a pipe
-                    writter.write(array);
+                    sleep(500);
+                    //Loading it into a pipe, No jumk
+                    writter.write(array,0,fileOutput);
+                    //Sending, Closing Connection
+                    writter.flush();
                 }
-                //Sending, Closing Connection
-                writter.flush();
+
                 AcceptedSocket.close();
             }
             catch(Exception e)
@@ -113,12 +107,7 @@ class HttpServerSession extends Thread
                 return;
             }
         }
-        catch(Exception e)
-        {
-            //System.out.println("Error :" + e);
-            //int x = getStackTrace()[0].getLineNumber();
-            //System.out.println("Line Number : " + x);
-        }
+        catch(Exception e) {}
     }
     //A Simple Print method that mimcs
     private void println(BufferedOutputStream bos, String s) throws IOException

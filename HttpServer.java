@@ -23,12 +23,10 @@ class HttpServer
 				System.out.println("Connection Made With : "+ client.getInetAddress());
 
 			}
-//getStackTrace()[0].getLineNumber();
 		}
 		catch(Exception e)
 		{
 			System.out.println("Error : " + e);
-			System.out.println("Http Server");
 		}
 	}
 }
