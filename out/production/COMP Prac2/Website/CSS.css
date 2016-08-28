@@ -1,0 +1,166 @@
+body
+{   
+    background-image: url("backgroundimg.jpg");
+   font-family: 'Slabo 27px', serif;
+   
+}
+#Nav a
+{   
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#InfoM a, #Main a
+{   
+    text-decoration: none;
+    color: lightblue;
+    
+}
+hr#quizsep{width: 650px;}
+
+
+#Nav a:hover
+{
+    font-weight: bold;
+}
+#InfoM a:hover, #Main a:hover
+{
+ text-decoration: underline;
+}
+#Countainer, #CountainerInfo,#CountainerD
+{
+    background-color: black;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2%;
+    border-style: solid;
+    border-width: medium;
+    border-color: white;    
+}
+#bs
+{color:black; }
+
+#Countainer
+{
+    height: 604px;
+}
+#CountainerInfo
+{
+    height: 1755px;
+}
+#CountainerD{height: 750px;}
+.Globe
+{
+    position: absolute;
+    top: 25%;
+    left: 62%
+}
+.HumanSpaceCraft
+{
+    position: absolute; 
+    top: 25%; 
+    left: 66%;
+}
+
+#Quiz1, #Quiz2
+{width: 400px; margin: 15px; }
+#Quiz2{width: 400px; margin: 15px; color: white;}
+#Content{color: white;}
+#Header
+{   
+    text-align: center;  
+    color: white;
+}
+
+#Nav li
+{
+   list-style-type: none;
+}
+
+
+#Nav, #InfoNav
+{
+    width: 140px;
+    
+    float: left; 
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    margin-left: -2px; 
+    
+}
+#BackNHeading{float: left;}
+
+#LeftArrow
+{
+    float: left; 
+    width: 10px; 
+    height: 20px;
+    margin: 0 auto;
+}
+#RightArrow
+{
+        float: right;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+                
+}
+
+#Nav{height: 519px;}
+#InfoNav{height: 1000px;}
+#Main, #InfoMain, #DMain
+{
+    float: right;
+    color: white;
+    border-style: solid;
+    border-width: thin; 
+    margin-right: -2px;
+}
+#Main{height: 519px;    width: 559px;  }
+#InfoMain{height: 1700px;    width: 700px; } 
+#InfoM{padding-left: 10px;}
+#DMain
+{
+    height: 900px; 
+    width: 700px;
+}
+#IntroImg, #IntroList, #intro, h2,#EachNav
+{
+    padding-left: 20px;
+}
+#IntroImg
+{
+    float: left;
+}
+#IntroImg2
+{   
+    margin-left: 20px;
+}
+
+
+#InfoHr{width: 600px;}
+#Launch{float: left; padding: 10px;}
+#Splashdown{float: right; padding: 10px;}
+#LaunchVid, #LandingVid{padding-left: 10px;}
+#quiz1photo{float: right;padding-right: 10px;}
+#quiz2photo{float: right;padding-right: 10px;}
+.tick
+   { 
+       height: 10px; 
+       width: 15px;
+       background-image: url("smacktick.png");
+       background-repeat: no-repeat;
+       background-position: -10px 0px;
+       float: right;
+     
+       display: none
+    
+   }
+
+
+

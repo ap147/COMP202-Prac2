@@ -25,18 +25,6 @@ class HttpServer
 			}
 //getStackTrace()[0].getLineNumber();
 		}
-		/*
-
-Extend your web-server to catch that exception and
-return the 404 message detailed earlier.
-
-Extend your web-server to log a message that
-says whether or not the requested le was found or not.
-
-Test: Check that your web-server sends a 404 message by requesting a le that you
-know does not exist.
-5
-		 */
 		catch(Exception e)
 		{
 			System.out.println("Error : " + e);

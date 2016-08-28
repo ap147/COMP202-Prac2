@@ -34,7 +34,7 @@ class HttpServerSession extends Thread
                 {
                     String filename = parts[1].substring(1);
                     RequestedFile = filename;
-                    System.out.println("File Requested : " + filename + "x");
+                    System.out.println("File Requested : " + filename);
                     if(filename.compareTo("HttpServer.java") == 0)
                     {
 
@@ -115,10 +115,9 @@ class HttpServerSession extends Thread
         }
         catch(Exception e)
         {
-            System.out.println("Error :" + e);
-            System.out.println("Http Server Session");
-            int x = getStackTrace()[0].getLineNumber();
-            System.out.println("Line Number : " + x);
+            //System.out.println("Error :" + e);
+            //int x = getStackTrace()[0].getLineNumber();
+            //System.out.println("Line Number : " + x);
         }
     }
     //A Simple Print method that mimcs
@@ -132,6 +131,4 @@ class HttpServerSession extends Thread
         }
         return;
     }
-
-    
 }
